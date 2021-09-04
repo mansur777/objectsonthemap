@@ -42,10 +42,10 @@ ngOnInit() {
   }
 
   private getData() {
-    console.log('getData()...');
+    //console.log('getData()...');
     this.GeoDataService.getGeoData()
     .subscribe(res => {
-      console.log('this.geopoints: ', res);
+      //console.log('this.geopoints: ', res);
       this.geopoints = res;
       res.forEach(r => {
         this.markerArray.push(L.marker([r.latitude, r.longitude]));
@@ -57,7 +57,6 @@ ngOnInit() {
 
   private centerMap(lat: number, lng: number) {
     let latlng = L.latLng(lat, lng);
-    //console.log(latlng);
     this.map.setView(latlng, 10);
   }
 
