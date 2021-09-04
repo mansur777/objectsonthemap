@@ -1,0 +1,22 @@
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>
+
+<div class="overlay">
+  <mat-selection-list #points [multiple]="false">
+    <mat-list-option
+      *ngFor="let geopoint of geopoints"
+      [value]="geopoint.name"
+      (click)="centerMap(geopoint.latitude, geopoint.longitude)"
+    >
+      {{ geopoint.name }}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <p class="left-padding">
+    Option selected:<br />
+    <b>{{ points.selectedOptions.selected[0]?.value }}</b>
+  </p>
+</div>
