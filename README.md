@@ -1,27 +1,28 @@
-# MapTest
+# MapTest - Отображение объектов на карте
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+Тестовое приложение на [Angular](https://github.com/angular/angular-cli) 11.0.2 + [Leaflet](https://github.com/Leaflet/Leaflet) 1.7.1,
+в котором отображается карта с нанесенными на нее маркерами объектов из [списка](https://raw.githubusercontent.com/waliot/test-tasks/master/assets/data/frontend-1-dataset.json).
 
-## Development server
+При выборе объекта в меню, строка с объектом подсвечивается, а карта автоматически масштабируется и центрируется на выбраном объекте.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Установка и запуск
 
-## Code scaffolding
+```sh
+#скачайте репозиторий
+git clone https://github.com/mansur777/objectsonthemap.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#перейдите в папку проекта
+cd objectsonthemap
 
-## Build
+#установите зависимости
+npm i
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#запустите тестовый сервер
+ng serve --open
+```
 
-## Running unit tests
+В браузере откроется проект по адресу `http://localhost:4200/`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Запуск без установки
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Перейдите по адресу `https://stackblitz.com/github/mansur777/objectsonthemap`. Дождитесь инициализации проекта.
